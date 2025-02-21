@@ -1,0 +1,139 @@
+:root{
+    /* Colors */
+    --color-a:#0e0e0e;
+    --color-b: #272727;
+    --color-c: #FFFFFF;
+    --color-d: #505050;
+    --color-e: #191919;
+    --color-f: #0029e2;
+    --color-g: #002ae4;
+
+    /* Giant Spacing Parameters */
+    --margin-giant:  6rem;
+    --padding-giant: 6rem;
+    --gap-giant:     6rem;
+    --border-radius-giant: 6rem;
+    
+    /* General Spacing Parameters */
+    --margin-general:  2.4rem;
+    --padding-general: 2.4rem;
+    --gap-general:     2.4rem;
+    --border-radius-general: 2.4rem;
+
+    /* Moderate Spacing Parameters */
+    --margin-moderate:  1rem;
+    --padding-moderate: 1rem;
+    --gap-moderate:     1rem;
+    --border-radius-moderate: 1rem;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Atkinson Hyperlegible Mono", serif;
+    /*font-family: "Poppins", serif;*/
+    /*border: 1px solid chartreuse;*/
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--color-a);
+}
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    padding: var(--padding-general);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-c);
+}
+header > #logo_x{
+    width: 100px;
+}
+header h1{
+    font-weight: normal;
+    background-color: var(--color-e);
+    width: 90%;
+    padding-block-start: 0.9rem;
+    padding-block-end: 0.9rem;
+    text-align: center;
+}
+
+main{
+    padding: var(--padding-general);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    overflow: auto;
+}main #cryptoTable{
+    font-size: 1.5rem;
+    width: 100%;
+    color: var(--color-d);
+}
+main #cryptoTable{
+    border-collapse: collapse;
+}
+main #cryptoTable th {
+    font-weight: normal;
+}
+main #cryptoTable td,
+main #cryptoTable th {
+    text-align: right;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+}
+main #cryptoTable td:first-child,
+main #cryptoTable th:first-child {
+    text-align: left;
+}
+main #cryptoTable thead tr:nth-child(1),
+main #cryptoTable tbody tr:last-child {
+    color: var(--color-c);
+}
+main #cryptoTable tbody tr:nth-child(odd) {
+    background-color: var(--color-e);
+}
+main #cryptoTable tbody tr:nth-child(3),
+main #cryptoTable tbody tr:nth-child(5),
+main #cryptoTable tbody tr:nth-child(7) {
+    color: var(--color-g);
+}
+
+
+
+/* Responsive Design: Hide columns on mobile */
+@media (max-width: 768px) {
+    main #cryptoTable th:nth-child(2), /* Amount */
+    main #cryptoTable td:nth-child(2),
+    main #cryptoTable th:nth-child(3), /* $USD */
+    main #cryptoTable td:nth-child(3) {
+        display: none;
+    }
+}
+
+
+
+
+footer{
+    padding: var(--padding-general);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-c);
+}
+footer #currentDate{
+    font-size: 1.2rem;
+}
