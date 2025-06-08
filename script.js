@@ -3,7 +3,7 @@ const assets = [
     { name: "eHEX (PLS)", amount: 72_711, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xF0eA3efE42C11c8819948Ec2D3179F4084863D3F" },
     { name: "HEX", amount: 415_000, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xf1F4ee610b2bAbB05C635F726eF8B0C568c8dc65" },
     { name: "PLS", amount: 43_160, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xE56043671df55dE5CDf8459710433C10324DE0aE" },
-    { name: "PLSX", amount: 364_731_517, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0x1b45b9148791d3a104184Cd5DFE5CE57193a3ee9" },
+    { name: "PLSX", amount: 372_978_156, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0x1b45b9148791d3a104184Cd5DFE5CE57193a3ee9" },
     { name: "INC", amount: 592, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xf808Bb6265e9Ca27002c0A04562Bf50d4FE37EAA" },
     { name: "XEN", amount: 28_686_127_468, url: "https://api.dexscreener.com/latest/dex/pairs/ethereum/0x2a9d2ba41aba912316D16742f259412B681898Db" },
     { name: "pXEN", amount: 1_411_058_764_238, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0x61C8D2DeE20F8e303B999D485cFa577054196B40" },
