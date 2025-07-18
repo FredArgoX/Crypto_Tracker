@@ -54,6 +54,8 @@ async function updateTable() {
         });
     }
 
+    assetData.sort((a, b) => b.totalValueUSD - a.totalValueUSD);
+
     // Second loop: Populate the table with data
     for (const asset of assetData) {
         const percentage = totalSumUSD ? ((asset.totalValueUSD / totalSumUSD) * 100).toFixed(0) : "0";
