@@ -61,7 +61,7 @@ async function updateTable() {
         const percentage = totalSumUSD ? ((asset.totalValueUSD / totalSumUSD) * 100).toFixed(0) : "0";
         totalPercentageSum += parseFloat(percentage);
 
-        await new Promise(resolve => setTimeout(resolve, 300)); // Wait 1 second before adding the new row
+        await new Promise(resolve => setTimeout(resolve, 300));
 
         const row = document.createElement("tr");
         row.innerHTML = `
@@ -75,11 +75,29 @@ async function updateTable() {
         tableBody.appendChild(row);
     }
 
-    // Add the total row
-    await new Promise(resolve => setTimeout(resolve, 300)); // Wait 1 second before adding the total row
+    // 👉 Compute top 3 core totals
+    const top3 = assetData.slice(0, 3);
+    const coreUSD = top3.reduce((sum, a) => sum + a.totalValueUSD, 0);
+    const coreMXN = top3.reduce((sum, a) => sum + a.totalValueMXN, 0);
+    const corePercent = totalSumUSD ? ((coreUSD / totalSumUSD) * 100).toFixed(0) : "0";
+
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const totalCoreRow = document.createElement("tr");
+    totalCoreRow.innerHTML = `
+        <td>Top 3 Total</td>
+        <td>-</td>
+        <td>-</td>
+        <td>${coreUSD.toLocaleString()}</td>
+        <td>${coreMXN.toLocaleString()}</td>
+        <td>${corePercent}</td>
+    `;
+    tableBody.appendChild(totalCoreRow);
+
+    // 👉 Now add the grand total row
+    await new Promise(resolve => setTimeout(resolve, 300));
     const totalRow = document.createElement("tr");
     totalRow.innerHTML = `
-        <td>-</td>
+        <td>Grand Total</td>
         <td>-</td>
         <td>-</td>
         <td>${totalSumUSD.toLocaleString()}</td>
@@ -88,6 +106,7 @@ async function updateTable() {
     `;
     tableBody.appendChild(totalRow);
 }
+
 
 // Fetch prices and update the table every 60 seconds
 updateTable();

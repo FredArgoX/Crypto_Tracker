@@ -107,7 +107,8 @@ main #cryptoTable tbody tr:nth-child(odd) {
 }
 main #cryptoTable tbody tr:nth-child(1),
 main #cryptoTable tbody tr:nth-child(2),
-main #cryptoTable tbody tr:nth-child(3) {
+main #cryptoTable tbody tr:nth-child(3),
+main #cryptoTable tbody tr:nth-last-child(2) {
     color: var(--color-g);
 }
 
