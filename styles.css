@@ -39,7 +39,7 @@ html{
     font-size: 62.5%;
 }
 body{
-    background-color: var(--color-a);
+    background-color: var(--color-e);
 }
 html,
 body {
@@ -93,6 +93,8 @@ main #cryptoTable th {
     text-align: right;
     padding-inline-start: 1rem;
     padding-inline-end: 1rem;
+    padding-block-start: 0.2rem;
+    padding-block-end: 0.2rem;
 }
 main #cryptoTable td:first-child,
 main #cryptoTable th:first-child {
