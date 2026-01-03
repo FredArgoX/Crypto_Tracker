@@ -1,5 +1,5 @@
 const assets = [
-    { name: "HEX (ETH)", amount: 537_000, url: "https://api.dexscreener.com/latest/dex/pairs/ethereum/0x9e0905249CeEFfFB9605E034b534544684A58BE6" },
+    { name: "HEX (ETH)", amount: 500_000, url: "https://api.dexscreener.com/latest/dex/pairs/ethereum/0x9e0905249CeEFfFB9605E034b534544684A58BE6" },
     //{ name: "eHEX (PLS)", amount: 72_980, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xF0eA3efE42C11c8819948Ec2D3179F4084863D3F" },
     { name: "HEX", amount: 1_000_000, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xf1F4ee610b2bAbB05C635F726eF8B0C568c8dc65" },
     { name: "PLS", amount: 50_000, url: "https://api.dexscreener.com/latest/dex/pairs/pulsechain/0xE56043671df55dE5CDf8459710433C10324DE0aE" },
