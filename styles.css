@@ -61,7 +61,7 @@ header > #logo_x{
     width: 100px;
 }
 header h1{
-    font-weight: normal;
+    font-weight: bolder;
     background-color: var(--color-e);
     width: 90%;
     padding-block-start: 0.9rem;
@@ -86,7 +86,7 @@ main #cryptoTable{
     border-collapse: collapse;
 }
 main #cryptoTable th {
-    font-weight: normal;
+    font-weight: bolder;
 }
 main #cryptoTable td,
 main #cryptoTable th {
@@ -118,6 +118,7 @@ main #cryptoTable tbody tr:nth-child(1),
 main #cryptoTable tbody tr:nth-child(2){
     background-color: var(--color-g);
     color: var(--color-e);
+    font-weight: bolder;
 }
 
 
