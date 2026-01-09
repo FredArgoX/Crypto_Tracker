@@ -130,7 +130,7 @@ async function updateTable() {
 
 // Fetch prices and update the table every 60 seconds
 updateTable();
-setInterval(updateTable, 600000);
+setInterval(updateTable, 60000);
 
 
 // Show Current Date
