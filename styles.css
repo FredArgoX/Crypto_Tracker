@@ -115,7 +115,8 @@ main #cryptoTable tbody tr:nth-last-child(2) {
 }
 /* HEX color change since 1M tokens shown */
 main #cryptoTable tbody tr:nth-child(1),
-main #cryptoTable tbody tr:nth-child(2){
+main #cryptoTable tbody tr:nth-child(2),
+main #cryptoTable tbody tr:nth-child(7){
     background-color: var(--color-g);
     color: var(--color-e);
     font-weight: bolder;

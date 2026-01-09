@@ -75,6 +75,24 @@ async function updateTable() {
         tableBody.appendChild(row);
     }
 
+    // 👉 Compute top 32 core totals
+    const top32 = assetData.slice(0, 2);
+    const coreUSD2 = top32.reduce((sum, a) => sum + a.totalValueUSD, 0);
+    const coreMXN2 = top32.reduce((sum, a) => sum + a.totalValueMXN, 0);
+    const corePercent2 = totalSumUSD ? ((coreUSD2 / totalSumUSD) * 100).toFixed(0) : "0";
+
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const totalCoreRow2 = document.createElement("tr");
+    totalCoreRow2.innerHTML = `
+        <td>Top 2 Total</td>
+        <td>-</td>
+        <td>-</td>
+        <td>${coreUSD2.toLocaleString()}</td>
+        <td>${coreMXN2.toLocaleString()}</td>
+        <td>${corePercent2}</td>
+    `;
+    tableBody.appendChild(totalCoreRow2);
+
     // 👉 Compute top 3 core totals
     const top3 = assetData.slice(0, 3);
     const coreUSD = top3.reduce((sum, a) => sum + a.totalValueUSD, 0);
@@ -92,6 +110,8 @@ async function updateTable() {
         <td>${corePercent}</td>
     `;
     tableBody.appendChild(totalCoreRow);
+
+    
 
     // 👉 Now add the grand total row
     await new Promise(resolve => setTimeout(resolve, 300));
