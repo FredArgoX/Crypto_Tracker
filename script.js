@@ -40,7 +40,7 @@ async function updateTable() {
     for (const asset of assets) {
         const price = await fetchPrice(asset.url);
         const totalValueUSD = price ? Math.floor(asset.amount * price) : 0;
-        const totalValueMXN = Math.floor(totalValueUSD * 20);
+        const totalValueMXN = Math.floor(totalValueUSD * 17);
 
         totalSumUSD += totalValueUSD;
         totalSumMXN += totalValueMXN;
